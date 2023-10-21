@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs3</title>
+    <!-- Using Vue from CDN -->
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p>{{ title }}-{{ message }}-{{ author }}-{{ age }}</p>
+        <!-- click  event -->
+        <button v-on:click="increaseAge">Increase age</button>
+        <button v-on:click="decreaseAge">Decrease age</button>
+        <!-- <div @click="title = 'Something else'">Clickme</div> -->
+        <div @click="changeTitle('I am a title')">Click me</div>
+    </div>
+    <div id="appif">
+        <p v-if="status">{{ text }}</p>
+        <div>
+            <button @click="showText(true)">
+                <span v-if="status">Hide Text</span>
+                <!-- <span v-if="!status">Show Text</span> -->
+                <span v-else>Show Text</span>
+            </button>
+            <!-- <button @click="showText(false)">
+                <span>Hide Text</span>
+            </button> -->
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
